@@ -64,3 +64,6 @@ php artisan key:generate
 
 Acesse o projeto
 [http://localhost:8989](http://localhost:8989)
+
+Acesse o phpmyadmin
+[http://localhost:8899](http://localhost:8899)

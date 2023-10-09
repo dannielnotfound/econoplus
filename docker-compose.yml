@@ -45,7 +45,7 @@ services:
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin_teste
+        container_name: phpmyadmin_econoplus
         links:
             - db
         restart: always

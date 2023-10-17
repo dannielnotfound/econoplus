@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --main-color: #201B2C;
+    /* --main-color: #03BD8D; */
+    --body-color: #FFFFFF;
+    --primary-color: #97F675;
+}
+
+body {
+    background-color: var(--main-color) !important;
+}
+
+header{
+    width: 100%;
+    background-color: black;
+    margin: 0;
+}
+
+/* .modify-pd{
+    padding-left: 0;
+    padding-right: 0;
+} */
+
+textarea:focus,
+input:focus,
+select:focus {
+    box-shadow: 0 0 0 0 !important;
+    border: 1 none !important;
+    outline: 0 !important;
+}
+
+.img {
+    max-width: 150px;
+}
+
+.text {
+    font-weight: 800 !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.active {
+    color: var(--primary-color) !important;
+}
+
+.home {
+    padding: 20px !important;
+    background-color: var(--body-color);
+    max-width: 98%;
+    max-height: 100% !important;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .botao-exportar {
+        height: 50px;
+        width: 330px;
+    }
+}
+
+.container {
+    background-color: #5326be !important;
+}
+
+.dashboard-class {
+    color: #ffffff !important;
+}

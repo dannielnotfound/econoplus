@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('depesas', function (Blueprint $table) {
+        Schema::create('despesas', function (Blueprint $table) {
             $table->id();
+            $table->string('descricao', 40);
+            $table->float('valor', 8, 2);
+            $table->date('vencimento');
+            $table->integer('status');
+            $table->text('observacao')->nullable();
             $table->timestamps();
         });
     }

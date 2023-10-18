@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Depesa;
+use App\Models\Despesa;
 use Illuminate\Http\Request;
 
 class DespesasController extends Controller
@@ -16,21 +16,29 @@ class DespesasController extends Controller
 
     public function create()
     {
-        //
+        return view('despesas.create');
     }
 
 
-    public function store(Request $request)
-    {
-        //
+    public function store(Despesa $model, Request $request)
+    {   
+ 
+        $model->create($request->all());
+
+        return view('despesas.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Depesa $model)
-    {
-        //
+    public function show(Despesa $model, $despesaId)
+    {   
+
+        if(!$model =  $model->find($despesaId)){
+            return redirect()->back();
+        }
+        
+        return view('despesas.show', compact('id', 'despesaId'));
     }
 
     /**

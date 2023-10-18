@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('receitas', function (Blueprint $table) {
             $table->id();
+   
+          //  $table->int('user_id') // fk da tabela users
             $table->timestamps();
         });
     }

@@ -8,9 +8,14 @@ use Illuminate\Http\Request;
 class DespesasController extends Controller
 {
 
-    public function index()
+    public function index(Despesa $model)
     {
-        return view('despesas.index');
+
+        $data = $model->all();
+        
+        return view('despesas.index', ['data' => $data]);
+
+
     }
 
 
@@ -25,7 +30,11 @@ class DespesasController extends Controller
  
         $model->create($request->all());
 
-        return view('despesas.index');
+
+        $data = $model->all();
+        
+        return view('despesas.index', ['data' => $data]);
+   
     }
 
     /**

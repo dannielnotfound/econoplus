@@ -1,25 +1,46 @@
+@extends('layouts.app')
+@section('content')
 
-<h1>Cadastrar nova Despesa</h1>
+.content
+<h1 class="text text-white">Cadastrar nova Despesa</h1>
 
-<form action="{{route('despesas.store')}}" method="post">
+<form class="text text-white" action="{{route('despesas.store')}}" method="post">
     @csrf
-    <input type="text" name='descricao' placeholder="Descricao">
-    <br>
-    <input type="number"name='valor'  placeholder="Valor">
-    <br>
-    <label for="vencimento">Data de Vencimento</label>
-    <input type="date" name="vencimento">
-    <br>
-    <label for="status">Status</label>
-    <select name="status">
-        <option value="1">Pendente</option>
-        <option value="2">Pago</option>
-        <option value="3">Em atraso</option>
-    </select>
-    <br>
-    <label for="observacao">Anotações</label><br>
-    <textarea name="observacao" id="observacao" cols="30" rows="10"></textarea>
-    <br>
-    <br>
-    <input type="submit" value="Cadastrar">
+    <div class="form-group">
+        <input  class="form-control" type="text" name='descricao' placeholder="Descricao">
+
+    </div>
+    
+
+    <div class="form-group">
+        <input  class="form-control" type="number" name='valor'  placeholder="Valor">
+    </div>
+    
+    <div class="form-group">
+        <label for="vencimento">Data de Vencimento</label>
+        <input  class="form-control" type="date" name="vencimento">
+    </div>
+    
+    <div class="form-group">
+        <label for="status">Status</label>
+        <select  multiple class="form-control" name="status">
+            <option value="1">Pendente</option>
+            <option value="2">Pago</option>
+            <option value="3">Em atraso</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="observacao">Anotações</label>
+        <textarea class="form-control" name="observacao" id="observacao"  rows="3"></textarea>
+    </div>
+    
+    
+    <div class="form-group">
+        <input class='form-control' type="submit" value="Cadastrar">
+    </div>
 </form>
+   
+
+@endsection
+
